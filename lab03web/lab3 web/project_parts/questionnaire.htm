@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 4. Анкета</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; }
+    form { display: inline-block; text-align: left; width: 480px; }
+    fieldset { margin-bottom: 15px; }
+    label { display: block; margin: 6px 0 2px; }
+    label.inline { display: inline; }
+    input[type="text"], input[type="password"], input[type="email"], input[type="tel"],
+    input[type="date"], textarea, select { width: 100%; box-sizing: border-box; }
+  </style>
+</head>
+<body>
+  <h1>Анкета</h1>
+
+  <form action="" method="get">
+
+    <fieldset>
+      <legend>Особисті дані</legend>
+      <label for="fname">Ім'я:</label>
+      <input type="text" id="fname" name="fname" value="" placeholder="Введіть ім'я" required tabindex="1">
+
+      <label for="lname">Прізвище:</label>
+      <input type="text" id="lname" name="lname" value="" placeholder="Введіть прізвище" required tabindex="2">
+
+      <label for="birth">Дата народження:</label>
+      <input type="date" id="birth" name="birth" value="" tabindex="3">
+
+      <p>Стать:</p>
+      <input type="radio" id="g1" name="gender" value="male" tabindex="4">
+      <label class="inline" for="g1">Чоловіча</label>
+      <input type="radio" id="g2" name="gender" value="female" tabindex="5">
+      <label class="inline" for="g2">Жіноча</label>
+      <input type="radio" id="g3" name="gender" value="other" tabindex="6">
+      <label class="inline" for="g3">Інша</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Контакти та безпека</legend>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" value="" placeholder="name@example.com" autocomplete="off"
+             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required tabindex="7">
+
+      <label for="tel">Мобільний телефон:</label>
+      <input type="tel" id="tel" name="tel" value="" placeholder="+380501234567"
+             pattern="\+380[0-9]{9}" required tabindex="8">
+
+      <label for="pass">Пароль (6 символів: велика, мала літера, цифра):</label>
+      <input type="password" id="pass" name="password" value="" placeholder="Aa1bcd"
+             pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6}" required tabindex="9">
+    </fieldset>
+
+    <fieldset>
+      <legend>Освіта та інтереси</legend>
+      <p>Курс:</p>
+      <input type="radio" id="c1" name="course" value="1" tabindex="10">
+      <label class="inline" for="c1">1</label>
+      <input type="radio" id="c2" name="course" value="2" checked tabindex="11">
+      <label class="inline" for="c2">2</label>
+      <input type="radio" id="c3" name="course" value="3" tabindex="12">
+      <label class="inline" for="c3">3</label>
+
+      <p>Хобі:</p>
+      <input type="checkbox" id="h1" name="hobby" value="sport" tabindex="13">
+      <label class="inline" for="h1">Спорт</label>
+      <input type="checkbox" id="h2" name="hobby" value="music" tabindex="14">
+      <label class="inline" for="h2">Музика</label>
+      <input type="checkbox" id="h3" name="hobby" value="games" tabindex="15">
+      <label class="inline" for="h3">Ігри</label>
+      <input type="checkbox" id="h4" name="hobby" value="travel" tabindex="16">
+      <label class="inline" for="h4">Подорожі</label>
+
+      <label for="level">Рівень англійської:</label>
+      <select id="level" name="level" tabindex="17">
+        <option value="a1">A1</option>
+        <option value="a2">A2</option>
+        <option value="b1" selected>B1</option>
+        <option value="b2">B2</option>
+        <option value="c1">C1</option>
+      </select>
+
+      <label for="langs">Мови програмування (Ctrl + клік для кількох):</label>
+      <select id="langs" name="langs" multiple size="6" tabindex="18">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="cpp">C++</option>
+      </select>
+
+      <label for="subject">Улюблений предмет:</label>
+      <select id="subject" name="subject" tabindex="19">
+        <optgroup label="Програмування">
+          <option value="web">Веб-технології</option>
+          <option value="algo">Алгоритми</option>
+          <option value="oop">ООП</option>
+        </optgroup>
+        <optgroup label="Дані">
+          <option value="db">Бази даних</option>
+          <option value="ds">Структури даних</option>
+          <option value="ml">Машинне навчання</option>
+        </optgroup>
+        <optgroup label="Математика">
+          <option value="calc">Матаналіз</option>
+          <option value="algebra">Алгебра</option>
+          <option value="discrete">Дискретна математика</option>
+        </optgroup>
+        <optgroup label="Інше">
+          <option value="eng">Англійська мова</option>
+          <option value="phys">Фізкультура</option>
+          <option value="phil">Філософія</option>
+        </optgroup>
+      </select>
+
+      <label for="city">Місто (почніть вводити):</label>
+      <input type="text" id="city" name="city" value="" list="cities" placeholder="Чернівці" tabindex="20">
+      <datalist id="cities">
+        <option value="Чернівці">
+        <option value="Київ">
+        <option value="Львів">
+        <option value="Одеса">
+        <option value="Харків">
+      </datalist>
+    </fieldset>
+
+    <fieldset>
+      <legend>Додатково</legend>
+      <label for="about">Про себе:</label>
+      <textarea id="about" name="about" rows="4" placeholder="Розкажіть коротко про себе" tabindex="21"></textarea>
+
+      <label for="audio">Аудіо-файли (кілька):</label>
+      <input type="file" id="audio" name="audio" accept="audio/*" multiple tabindex="22">
+    </fieldset>
+
+    <button type="submit" name="send" value="submit" tabindex="23">Надіслати</button>
+    <button type="reset" name="clear" value="reset" tabindex="24">Очистити</button>
+  </form>
+
+  <p><a href="../index.html">Повернутись на головну</a></p>
+</body>
+</html>
