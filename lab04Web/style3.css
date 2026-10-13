@@ -1,0 +1,23 @@
+.title{
+    color: green;
+    
+}
+a{
+color: blueviolet;
+}
+ul li ul{
+    list-style-type:none ;
+}
+.vgs{
+list-style-image: url(free-icon-checkmark-7794654.png) ;
+}
+.berry{
+     list-style-type:square ;
+}
+.berry a{
+    text-decoration: none;
+}
+
+ol{
+    list-style-position:inside ;
+}

@@ -1,0 +1,35 @@
+.red{
+    color : red;
+}
+.nowrap{
+   white-space: nowrap;
+}
+p{
+    color :green;
+    text-align: center;
+}
+div{
+    text-align: justify;
+}
+
+*{
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 40px;
+}
+#for2P{
+    font-style: italic;
+    font-weight: bold;
+}
+.dropShadow{
+    text-shadow: 5px -5px 3px purple;
+}
+.for1div{
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+.for2div{
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}

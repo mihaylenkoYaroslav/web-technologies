@@ -1,0 +1,49 @@
+* {
+    text-align: center;
+    /* ИСПРАВЛЕНО: добавлено запасное семейство serif */
+    font-family: 'Times New Roman', serif;
+}
+
+#h1 {
+    color: red;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#h2 {
+    font-weight: bold;
+    font-size: x-large;
+    font-style: italic;
+}
+
+.name {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.qwe {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.underline {
+    text-decoration: underline;
+}
+.cancel {
+    text-decoration: line-through;
+}
+
+#back {
+    background-color: yellow;
+}
+#textfooter {
+    font-family: monospace;
+    font-style: italic;
+    font-size: large;
+}
+#line {
+    background-color: green;
+    border: none;
+    height: 6px;
+    width: 60%;
+}
