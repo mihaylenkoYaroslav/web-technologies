@@ -1,0 +1,65 @@
+.border{
+    width: 300px;
+    padding: 20px;
+    border: 5px solid;
+    margin: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: rgba(44, 255, 255, 0.342);
+    border-color: cadetblue;
+}
+.content{
+    width: 300px;
+    padding: 20px;
+    border: 5px solid;
+    margin: 20px;
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: rgba(44, 255, 255, 0.342);
+    border-color: cadetblue;
+}
+.visible, .hidden, .scroll, .auto{
+    max-height:80px;
+    width: 1200px;
+    border: 2px solid red;
+     margin-bottom: 60px;
+}
+.visible{
+    overflow: visible;
+}
+.hidden{
+    overflow: hidden;
+}
+.scroll{
+    overflow: scroll;
+}
+.auto{
+    overflow: auto;
+}
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    background-color: cadetblue;
+    color: white;
+    text-decoration: none;
+}
+
+.menu li:nth-child(3) {
+    display: none;
+}
+    /*
+    display: none полностью убирает элемент из раскладки:
+    он невидим и не занимает места, соседние пункты сдвигаются.
+    visibility: hidden 
+    opacity: 0  по нему всё ещё можно кликнуть.
+    */

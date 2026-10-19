@@ -1,0 +1,109 @@
+body {
+    background-color: papayawhip;
+    background-image: url(Pineapple.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(224, 224, 90, 0.774);
+    /* Якщо вікно браузера вужче за 320px, контейнер не стискається
+       далі , тому внизу з'являється горизонтальна прокрутка. */
+}
+
+.tag {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    background-color: #cde;
+    /* width і height не діють, бо display: inline.
+       У рядкового елемента розмір залежить лише від його вмісту. */
+}
+
+.tag_01 {
+    display: block;
+    width: 150px;
+    margin-bottom: 5px;
+    background-color: #f5d9a8;
+}
+
+.repeat {
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    border: 2px solid black;
+    background-image: url(free-icon-check-14035695.png);
+    background-size: 60px;
+}
+
+.repeat strong {
+    background-color: #fff;
+}
+
+.repeat-x {
+    background-repeat: repeat-x;
+}
+
+.repeat-y {
+    background-repeat: repeat-y;
+}
+
+/* space: картинки не змінюють розмір, їх вміщується ціла кількість,
+   а між ними розподіляється порожній простір.
+   round: ціла кількість картинок, але самі картинки розтягуються
+   або стискаються, щоб заповнити весь простір без проміжків. */
+.repeat-space {
+    background-repeat: space;
+}
+
+.repeat-round {
+    background-repeat: round;
+}
+
+.mach {
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    background-image: url(Pineapple.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mach strong {
+    background-color: #fff;
+}
+
+.mach_cont {
+    background-size: contain;
+}
+
+.mach_cover {
+    background-size: cover;
+}
+
+.attach {
+    width: 300px;
+    max-height: 150px;
+    margin: 10px;
+    overflow: auto;
+    background-image: url(Pineapple.webp);
+    background-size: 100px;
+}
+
+/* scroll: фон прив'язаний до самого блоку і стоїть на місці,
+   поки текст прокручується поверх нього.
+   local: фон прив'язаний до вмісту і прокручується разом із текстом. */
+.att_scroll {
+    background-attachment: scroll;
+}
+
+.att_local {
+    background-attachment: local;
+}

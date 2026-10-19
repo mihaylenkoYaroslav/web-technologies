@@ -1,0 +1,68 @@
+div{
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+    font-family: Arial;
+}
+h1{
+    font-size:25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+ul{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+div>ul>li{
+    background-color: rgb(103, 158, 128);
+    background-image: url(rule.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 30px;
+    padding-right: 20px;
+    padding-left: 50px;
+}
+div>ul>li>ul>li{
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(153, 180, 102);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+span{
+    padding: 10px 20px;
+    display: inline-block
+}
+div>ul>li>span{
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+div>ul>li>ul>li>span{
+    background-color: rgb(218, 106, 32);
+}
+.one{
+    background-image: url(ad_units.png);
+}
+.two{
+    background-image: url(airplane_ticket.png);
+}.three{
+    background-image: url(hotel.png);
+}.fhor{
+    background-image: url(car_rental.png);
+}.five{
+    background-image: url(local_bar.png);
+}.six{
+    background-image: url(casino.png);
+}.seven{
+    background-image: url(museum.png);
+}
+.ei{
+    background-image: url(festival.png);
+}
