@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.scene {
+    position: relative;
+    width: 700px;
+    height: 560px;
+    margin: 40px auto;
+    background-image: linear-gradient(to right, #a9a9a9, #c9c9c9);
+}
+
+.card {
+    position: absolute;
+    left: 110px;
+    top: 25px;
+    width: 370px;
+    height: 403px;
+    background-color: black;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.cloud {
+    position: absolute;
+    left: 250px;
+    top: 40px;
+    font-size: 360px;
+    line-height: 1;
+    color: white;
+    opacity: 0.95;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    z-index: 2;
+}
+
+.now {
+    position: absolute;
+    left: 130px;
+    top: 300px;
+    font-size: 100px;
+    font-weight: 700;
+    color: #999;
+    z-index: 3;
+}
+
+.forecast {
+    position: absolute;
+    left: 290px;
+    top: 342px;
+    box-sizing: border-box;
+    width: 380px;
+    height: 195px;
+    margin: 0;
+    padding: 100px 0 0;
+    list-style: none;
+    background-color: #cfcfcf;
+    box-shadow: 12px 12px 0 #999;
+    z-index: 4;
+}
+
+.forecast-item {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+.day {
+    display: block;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+.temp {
+    display: block;
+    font-size: 24px;
+    color: #222;
+}
+
+.arrows {
+    position: absolute;
+    left: 36px;
+    top: 144px;
+    width: 146px;
+    height: 73px;
+    z-index: 5;
+}
+
+.arrow {
+    float: left;
+    width: 73px;
+    height: 73px;
+    line-height: 73px;
+    text-align: center;
+    text-decoration: none;
+    color: #222;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.arrow .material-icons {
+    font-size: 48px;
+    vertical-align: middle;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}

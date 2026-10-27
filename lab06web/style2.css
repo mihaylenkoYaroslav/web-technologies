@@ -1,0 +1,56 @@
+.king{
+    position: relative;
+    width: 450px;
+    height: 200px;
+    margin:0 auto ;
+}
+.box1_1{
+background-color: green;
+width: 100px;
+height: 30px;
+position: absolute;
+border: solid 1px  black;
+top: 115px;
+left: 10px;
+text-align: center;
+}
+.box2_1{
+    width: 180px;
+    height: 150px;
+    position:absolute;
+    top: 0px;
+    padding-top:5px ;
+    left: 120px;
+    border: solid 1px  black;
+    visibility: hidden;
+    text-align: center;
+}
+.box1_1:hover +.box2_1{
+    background-color:aquamarine;
+    visibility: visible;
+}
+.box1_2{
+    background-color: green;
+    width: 100px;
+height: 30px;
+position: absolute;
+border: solid 1px  black;
+top: 100px;
+left: 125px;
+text-align: center;
+}
+.box2_2{
+    width: 100px;
+    height: 100px;
+    padding-top:5px ;
+    position: absolute;
+    border: solid 1px  black;
+    top: 0px;
+    left: 10px;
+    visibility: hidden;
+    text-align: center;
+}
+.box1_2:hover + .box2_2{
+    background-color: aquamarine;
+    visibility: visible;
+}
