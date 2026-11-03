@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather — New York, NY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="weather">
+    <header class="weather__header">
+      <h1 class="weather__city">New York, NY</h1>
+      <p class="weather__date">Tuesday, April 15th</p>
+      <p class="weather__condition">Overcast</p>
+
+      <div class="current">
+        <div class="current__main">
+          <img class="current__icon" src="icons/iconfinder_weather04.png" alt="Overcast" width="64" height="64">
+          <p class="current__temp">58<span class="current__unit">°F</span></p>
+        </div>
+        <ul class="current__details">
+          <li>Precipitation: 100%</li>
+          <li>Humidity: 97%</li>
+          <li>Wind: 4 mph SW</li>
+          <li>Pollen Count: 36</li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="forecast" aria-label="Weekly forecast">
+      <ul class="forecast__list">
+        <li class="day">
+          <h2 class="day__name">Today</h2>
+          <div class="day__icon-box">
+            <img class="day__icon" src="icons/iconfinder_weather07.png" alt="Thunderstorm with rain" width="56" height="56">
+          </div>
+          <p class="day__temp"><span class="day__high">68°</span><span class="day__low">36°</span></p>
+          <p class="day__pollen">Pollen 36</p>
+        </li>
+        <li class="day">
+          <h2 class="day__name">Wednesday</h2>
+          <div class="day__icon-box">
+            <img class="day__icon" src="icons/iconfinder_weather01.png" alt="Sunny" width="56" height="56">
+          </div>
+          <p class="day__temp"><span class="day__high">50°</span><span class="day__low">39°</span></p>
+          <p class="day__pollen">Pollen 36</p>
+        </li>
+        <li class="day">
+          <h2 class="day__name">Thursday</h2>
+          <div class="day__icon-box">
+            <img class="day__icon" src="icons/iconfinder_weather14.png" alt="Sun with umbrella" width="56" height="56">
+          </div>
+          <p class="day__temp"><span class="day__high">55°</span><span class="day__low">39°</span></p>
+          <p class="day__pollen">Pollen 36</p>
+        </li>
+        <li class="day">
+          <h2 class="day__name">Friday</h2>
+          <div class="day__icon-box">
+            <img class="day__icon" src="icons/iconfinder_weather02.png" alt="Partly cloudy" width="56" height="56">
+          </div>
+          <p class="day__temp"><span class="day__high">54°</span><span class="day__low">43°</span></p>
+          <p class="day__pollen">Pollen 36</p>
+        </li>
+        <li class="day">
+          <h2 class="day__name">Saturday</h2>
+          <div class="day__icon-box">
+            <img class="day__icon" src="icons/iconfinder_weather06.png" alt="Rain" width="56" height="56">
+          </div>
+          <p class="day__temp"><span class="day__high">64°</span><span class="day__low">46°</span></p>
+          <p class="day__pollen">Pollen 36</p>
+        </li>
+        <li class="day">
+          <h2 class="day__name">Sunday</h2>
+          <div class="day__icon-box">
+            <img class="day__icon" src="icons/iconfinder_weather13.png" alt="Snow" width="56" height="56">
+          </div>
+          <p class="day__temp"><span class="day__high">64°</span><span class="day__low">50°</span></p>
+          <p class="day__pollen">Pollen 36</p>
+        </li>
+        <li class="day">
+          <h2 class="day__name">Monday</h2>
+          <div class="day__icon-box">
+            <img class="day__icon" src="icons/iconfinder_weather03.png" alt="Sun behind clouds" width="56" height="56">
+          </div>
+          <p class="day__temp"><span class="day__high">61°</span><span class="day__low">50°</span></p>
+          <p class="day__pollen">Pollen 36</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
