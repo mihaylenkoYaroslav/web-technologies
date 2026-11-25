@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Інклюзивна освіта в Індії</title>
+<style>
+:root{--bg:#120f2b;--bg2:#1e1850;--fg:#f4f1ff;--mut:#b9b3de;--acc:#ff9f43;--acc2:#35c58f;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.14);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff8ee;--bg2:#ffe9cf;--fg:#1d1a3a;--mut:#575178;--acc:#d9660a;--acc2:#0f8a5f;--card:rgba(29,26,58,.06);--line:rgba(29,26,58,.15);color-scheme:light}}
+:root[data-theme="dark"]{color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*{box-sizing:border-box;margin:0}
+body{height:100%;overflow:hidden;background:var(--bg);color:var(--fg);font-family:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;line-height:1.55}
+.bg{position:fixed;inset:0;overflow:hidden;background:radial-gradient(circle at 20% 10%,var(--bg2),var(--bg) 60%)}
+.bg i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.45;animation:fl 16s ease-in-out infinite alternate}
+.bg i:nth-child(1){width:46vmax;height:46vmax;background:var(--acc);left:-14vmax;top:-12vmax;opacity:.25}
+.bg i:nth-child(2){width:40vmax;height:40vmax;background:var(--acc2);right:-12vmax;bottom:-14vmax;opacity:.22;animation-delay:-6s}
+.bg i:nth-child(3){width:26vmax;height:26vmax;background:#7b6cff;right:20%;top:-8vmax;opacity:.2;animation-delay:-10s}
+@keyframes fl{to{transform:translate(6vmax,5vmax) scale(1.15)}}
+.prog{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:4px;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width .6s ease;z-index:5}
+.slide{position:absolute;inset:0;padding:clamp(24px,5vw,60px) clamp(20px,7vw,100px) 92px;overflow-y:auto;display:flex;opacity:0;visibility:hidden;transform:translateX(4%) scale(.985);transition:opacity .6s,transform .7s cubic-bezier(.2,.7,.2,1),visibility 0s .7s}
+.slide.on{opacity:1;visibility:visible;transform:none;transition:opacity .6s,transform .7s cubic-bezier(.2,.7,.2,1)}
+.slide.past{transform:translateX(-4%) scale(.985)}
+.in{margin:auto;width:100%;max-width:1100px}
+.rv{opacity:0;transform:translateY(26px)}
+.on .rv{opacity:1;transform:none;transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*.1s + .25s)}
+.tag{display:inline-block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:800;margin-bottom:.7rem}
+h1,h2{font-family:"Playfair Display",Georgia,"Times New Roman",serif;line-height:1.12;font-weight:800}
+h1{font-size:clamp(2rem,5.4vw,4rem);max-width:15em}
+h2{font-size:clamp(1.7rem,3.8vw,2.9rem);margin-bottom:1.4rem}
+h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+p{font-size:clamp(1rem,1.7vw,1.22rem);color:var(--mut)}
+p b,.card b{color:var(--fg)}
+.lead{font-size:clamp(1.05rem,1.9vw,1.35rem);margin-top:1.4rem;max-width:42em}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 22px 20px;backdrop-filter:blur(6px);transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-5px);border-color:var(--acc)}
+.card h3{font-size:1.08rem;margin-bottom:.45rem;color:var(--fg)}
+.card p{font-size:.98rem}
+.num{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,var(--acc),#ff6b6b);color:#1a1033;margin-bottom:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:1.2rem 0 1.4rem}
+.chip{padding:11px 18px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:1rem}
+.chip:nth-child(odd){border-color:var(--acc)}.chip:nth-child(even){border-color:var(--acc2)}
+.big{font-family:Georgia,serif;font-size:clamp(3rem,9vw,6.4rem);font-weight:800;line-height:1;color:var(--acc)}
+.big small{font-size:.4em;color:var(--fg);font-family:inherit}
+.stat{text-align:left}
+.stat span{display:block;color:var(--mut);margin-top:.4rem}
+.bar{height:16px;border-radius:99px;background:var(--card);border:1px solid var(--line);overflow:hidden;margin-top:14px}
+.bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--acc2),var(--acc));transition:width 1.8s cubic-bezier(.2,.7,.2,1) .9s}
+.on .bar i{width:58.2%}
+.quote{border-left:4px solid var(--acc);padding:6px 0 6px 20px;margin-top:20px}
+.rings{position:absolute;right:-8vmax;top:50%;width:46vmax;height:46vmax;margin-top:-23vmax;pointer-events:none}
+.rings i{position:absolute;inset:0;border-radius:50%;border:2px dashed var(--acc);opacity:.35;animation:sp 40s linear infinite}
+.rings i:nth-child(2){inset:6vmax;border-color:var(--acc2);animation-direction:reverse;animation-duration:30s}
+.rings i:nth-child(3){inset:12vmax;border-style:solid;opacity:.2;animation-duration:55s}
+@keyframes sp{to{transform:rotate(360deg)}}
+.nav{position:fixed;left:0;right:0;bottom:0;padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;justify-content:center;gap:16px;z-index:5}
+.nav button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--fg);font-size:1.2rem;cursor:pointer;backdrop-filter:blur(8px);transition:background .2s,transform .2s}
+.nav button:hover{background:var(--acc);color:#1a1033;transform:scale(1.08)}
+.cnt{min-width:64px;text-align:center;font-weight:700;color:var(--mut);font-variant-numeric:tabular-nums}
+@media (max-width:640px){.rings{opacity:.5}.cnt{min-width:54px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}}
+</style>
+</head>
+<body>
+<div class="bg"><i></i><i></i><i></i></div>
+<div class="prog" id="prog"></div>
+
+<section class="slide">
+<div class="rings"><i></i><i></i><i></i></div>
+<div class="in">
+<span class="tag rv" style="--i:0">Інклюзивна освіта</span>
+<h1 class="rv" style="--i:1">Особливості впровадження інклюзивної освіти <em>в Індії</em></h1>
+<p class="lead rv" style="--i:2">Індія є однією з найбільш густонаселених країн світу, тому забезпечення рівного доступу до освіти є для неї досить складним завданням. Особливість індійської моделі полягає в тому, що вона охоплює не лише дітей з інвалідністю, а й <b>представників соціально вразливих груп</b>: дітей із бідних сімей, нижчих каст, корінних народів та дівчат із традиційних громад.</p>
+</div>
+</section>
+
+<section class="slide">
+<div class="in">
+<span class="tag rv" style="--i:0">Законодавча основа</span>
+<h2 class="rv" style="--i:1">На чому тримається <em>інклюзія</em></h2>
+<div class="grid">
+<div class="card rv" style="--i:2"><div class="num">1950</div><h3>Конституція Індії</h3><p>Основа розвитку інклюзивної освіти.</p></div>
+<div class="card rv" style="--i:3"><div class="num">2009</div><h3>Закон про право дітей на освіту</h3><p>«Про право дітей на безкоштовну та обов’язкову освіту».</p></div>
+<div class="card rv" style="--i:4"><div class="num">2016</div><h3>Закон про права осіб з інвалідністю</h3><p>Забороняє дискримінацію та гарантує дітям з інвалідністю можливість навчатися <b>нарівні з іншими</b>.</p></div>
+<div class="card rv" style="--i:5"><div class="num">2020</div><h3>Національна освітня політика</h3><p>Визначає рівність та доступність освіти одними з головних принципів.</p></div>
+</div>
+</div>
+</section>
+
+<section class="slide">
+<div class="in">
+<span class="tag rv" style="--i:0">Державна програма</span>
+<h2 class="rv" style="--i:1">Samagra Shiksha: <em>що отримують діти</em></h2>
+<p class="rv" style="--i:2">Для реалізації законодавчих положень діє державна програма Samagra Shiksha. У її межах дітям надають:</p>
+<div class="chips rv" style="--i:3"><span class="chip">Підручники шрифтом Брайля</span><span class="chip">Слухові апарати</span><span class="chip">Спеціальні пристрої</span><span class="chip">Транспортна допомога</span><span class="chip">Підтримка педагогів</span></div>
+<div class="card rv" style="--i:4"><h3>Фізична доступність шкіл</h3><p>Держава також фінансує облаштування шкіл <b>пандусами, поручнями та спеціальними туалетами</b>.</p></div>
+</div>
+</section>
+
+<section class="slide">
+<div class="in">
+<span class="tag rv" style="--i:0">Практика навчання</span>
+<h2 class="rv" style="--i:1">Усі навчаються <em>разом</em></h2>
+<p class="lead rv" style="--i:2" style="margin-top:0">Переважно діти з особливими освітніми потребами навчаються у звичайних школах разом з іншими учнями. За необхідності для них адаптують навчальні матеріали, залучають <b>спеціальних педагогів, психологів та логопедів</b>.</p>
+<div class="grid" style="margin-top:26px">
+<div class="card rv" style="--i:3"><h3>Порушення зору</h3><p>Дитина може користуватися підручниками шрифтом Брайля.</p></div>
+<div class="card rv" style="--i:4"><h3>Порушення слуху</h3><p>Дитині допомагає переклад жестовою мовою.</p></div>
+</div>
+</div>
+</section>
+
+<section class="slide">
+<div class="in">
+<span class="tag rv" style="--i:0">Цифрові технології</span>
+<h2 class="rv" style="--i:1">Система <em>PRASHAST</em></h2>
+<p class="rv" style="--i:2">Допомагає вчителям виявляти дітей, яким може знадобитися додаткова підтримка.</p>
+<div class="grid" style="margin-top:26px">
+<div class="card stat rv" style="--i:3"><div class="big"><span data-to="21">0</span></div><span>категорії інвалідності охоплює система</span></div>
+<div class="card stat rv" style="--i:4"><div class="big"><span data-to="23">0</span></div><span>мовами доступна, що особливо важливо для багатомовної Індії</span></div>
+</div>
+</div>
+</section>
+
+<section class="slide">
+<div class="in">
+<span class="tag rv" style="--i:0">Проблеми</span>
+<h2 class="rv" style="--i:1">Що <em>заважає</em> інклюзії</h2>
+<div class="grid">
+<div class="card rv" style="--i:2"><h3>Нестача ресурсів</h3><p>Нестача кваліфікованих педагогів, недостатнє фінансування та відсутність необхідної інфраструктури в багатьох школах. Особливо складна ситуація в сільській місцевості, де діти часто не мають доступу навіть до базових умов навчання.</p></div>
+<div class="card rv" style="--i:3"><h3>Суспільні стереотипи</h3><p>У деяких громадах досі існує упереджене ставлення до людей з інвалідністю.</p></div>
+<div class="card rv" style="--i:4"><h3>Подвійна дискримінація</h3><p>Діти з нижчих каст та дівчата з інвалідністю можуть стикатися з подвійною дискримінацією, що ще більше обмежує їхні освітні можливості.</p></div>
+</div>
+</div>
+</section>
+
+<section class="slide">
+<div class="in">
+<span class="tag rv" style="--i:0">Головна проблема</span>
+<h2 class="rv" style="--i:1">Розрив між <em>законом і реальністю</em></h2>
+<p class="rv" style="--i:2">На папері Індія має розвинену систему захисту прав дітей з інвалідністю: закони гарантують рівний доступ до освіти, забороняють дискримінацію та передбачають доступне освітнє середовище. Проте в реальному житті ці гарантії далеко не завжди виконуються.</p>
+<div class="grid" style="margin-top:22px">
+<div class="card rv" style="--i:3"><h3>Інфраструктура</h3><p>Багато шкіл не мають пандусів, спеціальних туалетів, ліфтів та обладнання. Дитина формально має право відвідувати школу, але фізично не завжди може потрапити до класу.</p></div>
+<div class="card rv" style="--i:4"><h3>Підтримка</h3><p>У багатьох школах не вистачає спеціальних педагогів, психологів та логопедів. Інклюзія існує лише формально: дитина присутня на уроках, але не має рівних можливостей для засвоєння матеріалу.</p></div>
+<div class="card rv" style="--i:5"><h3>Фінансування</h3><p>Великі міста мають більше можливостей, а сільські райони часто залишаються без необхідних ресурсів.</p></div>
+</div>
+<div class="card stat rv" style="--i:6;margin-top:16px"><div class="big"><span data-to="58.2" data-dec="1">0</span><small>%</small></div><span>шкіл Індії мали пандуси з поручнями за офіційними даними 2025–2026 навчального року</span><div class="bar"><i></i></div></div>
+</div>
+</section>
+
+<section class="slide">
+<div class="in">
+<span class="tag rv" style="--i:0">Висновки</span>
+<h2 class="rv" style="--i:1">Закони є. <em>Умов бракує.</em></h2>
+<div class="grid">
+<div class="card rv" style="--i:2"><div class="num">2007</div><h3>Міжнародні стандарти</h3><p>Індія ратифікувала Конвенцію ООН про права осіб з інвалідністю 2006 року, яка закріплює право кожної людини на інклюзивну освіту.</p></div>
+<div class="card rv" style="--i:3"><h3>Підсумок</h3><p>Індія створила законодавчу основу та запровадила державні програми. Проте головна проблема — не відсутність законів, а <b>труднощі їх реалізації</b>: держава визнає право кожної дитини на освіту, але не завжди забезпечує умови для його здійснення.</p></div>
+</div>
+<div class="quote rv" style="--i:4"><p>На мою думку, найцікавіша особливість індійського досвіду в тому, що інклюзія тут — не лише питання навчання дітей з інвалідністю, а й частина боротьби із загальною соціальною нерівністю. Справжня інклюзія означає можливість кожної дитини <b>повноцінно навчатися, спілкуватися та почуватися рівноправною частиною суспільства</b>.</p></div>
+</div>
+</section>
+
+<div class="nav"><button id="pv" aria-label="Назад">‹</button><div class="cnt" id="cnt">1 / 8</div><button id="nx" aria-label="Далі">›</button></div>
+
+<script>
+(function(){
+var S=[].slice.call(document.querySelectorAll('.slide')),cur=-1,N=S.length;
+function count(el){var to=+el.dataset.to,d=+el.dataset.dec||0,t0=null;function f(t){t0=t0||t;var p=Math.min(1,(t-t0)/1500);el.textContent=(to*(1-Math.pow(1-p,3))).toFixed(d).replace('.',',');if(p<1)requestAnimationFrame(f)}el.textContent='0';requestAnimationFrame(f)}
+function go(n,upd){n=Math.max(0,Math.min(N-1,n));if(n===cur)return;
+S.forEach(function(s,i){s.classList.toggle('on',i===n);s.classList.toggle('past',i<n)});
+cur=n;S[n].scrollTop=0;
+[].forEach.call(S[n].querySelectorAll('[data-to]'),function(e){setTimeout(function(){count(e)},500)});
+document.getElementById('cnt').textContent=(n+1)+' / '+N;
+document.getElementById('prog').style.width=((n+1)/N*100)+'%';
+if(upd!==false){try{location.hash='s'+(n+1)}catch(e){}}}
+function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?+m[1]-1:0}
+document.getElementById('pv').onclick=function(){go(cur-1)};
+document.getElementById('nx').onclick=function(){go(cur+1)};
+document.addEventListener('keydown',function(e){var k=e.key;
+if(k==='ArrowRight'||k==='PageDown'||k===' '){e.preventDefault();go(cur+1)}
+else if(k==='ArrowLeft'||k==='PageUp'){e.preventDefault();go(cur-1)}
+else if(k==='Home')go(0);else if(k==='End')go(N-1)});
+var x0=null,y0=null;
+document.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+document.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;
+if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.4)go(cur+(dx<0?1:-1));x0=null},{passive:true});
+window.addEventListener('hashchange',function(){go(fromHash(),false)});
+go(fromHash(),false);
+})();
+</script>
+</body>
+</html>
